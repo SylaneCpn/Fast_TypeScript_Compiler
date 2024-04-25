@@ -27,7 +27,7 @@ fn main() {
 
     //println!("Compiled to js successfully !")
     }
-    else if (args[1] == "--clear") && (args.len() == 2){
+    else if (args[1] == "--clean") && (args.len() == 2){
             
             if let Ok(paths) = fs::read_dir("./src_js") {
     
@@ -69,6 +69,6 @@ fn main() {
         println!();
         println!("ftsc \nto compile all .ts file in the current directory");
         println!();
-        println!("ftsc --clear \nto clear all compiled .js file in the \"src_js\" directory");
+        println!("ftsc --clean \nto clear all compiled .js file in the \"src_js\" directory");
     }
 }
