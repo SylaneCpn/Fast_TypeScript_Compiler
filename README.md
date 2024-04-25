@@ -1,4 +1,4 @@
-##Fast_TypeScript_Compiler
+##Fast_TypeScript_Compiler##
 
 Simple way to compile your all your .ts files  at once!
 
