@@ -37,9 +37,9 @@ fn main() {
             .filter(|e| e.metadata().unwrap().is_file())
             //get the file name
             .map(|x| x.file_name().into_string().unwrap())
-            //only the .ts file 
+            //only the .js file 
             .filter(|s| s.ends_with(".js"))
-            //call tsc for each file 
+            //remove for each file 
             .for_each(|t|{
                 let mut c =Command::new("rm")
                 .arg(format!("./src_js/{}",t))
@@ -49,7 +49,7 @@ fn main() {
                 let _ = c.wait();
             });
 
-            
+                //remove the directory
                 let mut c = Command::new("rmdir")
                 .arg("./src_js")
                 .spawn()    
